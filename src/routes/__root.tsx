@@ -81,12 +81,18 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       {
         name: "description",
         content:
-          "Portfolio of Ansh Rajore — AI-native products, agentic systems and full-stack engineering from Nashik.",
+          "Portfolio of Ansh Rajore — AI-native products, agentic systems and full-stack engineering from Nashik. Building NayaMarg and NEST.",
       },
       { name: "author", content: "Ansh Rajore" },
       { property: "og:site_name", content: "Ansh Rajore" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      { property: "og:title", content: "Ansh Rajore — Founder, AI Builder & Full-Stack Engineer" },
+      { name: "twitter:title", content: "Ansh Rajore — Founder, AI Builder & Full-Stack Engineer" },
+      { property: "og:description", content: "Portfolio of Ansh Rajore — AI-native products, agentic systems and full-stack engineering from Nashik. Building NayaMarg and NEST." },
+      { name: "twitter:description", content: "Portfolio of Ansh Rajore — AI-native products, agentic systems and full-stack engineering from Nashik. Building NayaMarg and NEST." },
+      { property: "og:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/attachments/og-images/221b2f6f-4296-4cf6-b86e-5118c61d83bc" },
+      { name: "twitter:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/attachments/og-images/221b2f6f-4296-4cf6-b86e-5118c61d83bc" },
     ],
     links: [
       {
