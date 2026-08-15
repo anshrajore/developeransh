@@ -1,24 +1,81 @@
 import { createFileRoute } from "@tanstack/react-router";
 
-// No head() here: the home route inherits title/description/og/twitter from
-// __root.tsx, and ships no og:image so serve-time hosting can inject the
-// project's social preview (explicit og:image or latest screenshot).
+import { About } from "@/components/site/About";
+import { Achievements } from "@/components/site/Achievements";
+import { Contact } from "@/components/site/Contact";
+import { Faq } from "@/components/site/Faq";
+import { Github } from "@/components/site/Github";
+import { Hero } from "@/components/site/Hero";
+import { Nav } from "@/components/site/Nav";
+import { Nest } from "@/components/site/Nest";
+import { Stats } from "@/components/site/Stats";
+import { Tech } from "@/components/site/Tech";
+import { Timeline } from "@/components/site/Timeline";
+import { Work } from "@/components/site/Work";
+import { FAQ } from "@/data/portfolio";
+
+const TITLE = "Ansh Rajore — Founder, AI Builder & Full-Stack Engineer";
+const DESCRIPTION =
+  "Portfolio of Ansh Rajore — AI-native products, agentic systems and full-stack engineering from Nashik. Building NayaMarg and NEST.";
+
 export const Route = createFileRoute("/")({
+  head: () => ({
+    meta: [
+      { title: TITLE },
+      { name: "description", content: DESCRIPTION },
+      { property: "og:title", content: TITLE },
+      { property: "og:description", content: DESCRIPTION },
+      { property: "og:type", content: "website" },
+      { property: "og:url", content: "/" },
+      { name: "twitter:card", content: "summary_large_image" },
+    ],
+    links: [{ rel: "canonical", href: "/" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Person",
+          name: "Ansh Rajore",
+          jobTitle: "Founder, AI Builder & Full-Stack Engineer",
+          address: { "@type": "PostalAddress", addressLocality: "Nashik", addressCountry: "IN" },
+          sameAs: ["https://github.com/anshrajore", "https://www.linkedin.com/in/anshrajore"],
+        }),
+      },
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          mainEntity: FAQ.map((item) => ({
+            "@type": "Question",
+            name: item.q,
+            acceptedAnswer: { "@type": "Answer", text: item.a },
+          })),
+        }),
+      },
+    ],
+  }),
   component: Index,
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
 function Index() {
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
-    </div>
+    <>
+      <Nav />
+      <main>
+        <Hero />
+        <Stats />
+        <Work />
+        <About />
+        <Github />
+        <Nest />
+        <Achievements />
+        <Timeline />
+        <Tech />
+        <Faq />
+      </main>
+      <Contact />
+    </>
   );
 }
