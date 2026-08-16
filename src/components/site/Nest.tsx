@@ -54,6 +54,22 @@ export function Nest() {
             </Reveal>
 
             <div className="grid gap-4 lg:col-span-6">
+              <Reveal>
+                <div className="grid grid-cols-2 gap-4">
+                  <img
+                    src={nestEvents.url}
+                    alt="NEST initiatives poster featuring Ansh Rajore"
+                    loading="lazy"
+                    className="h-56 w-full rounded-[22px] border border-white/15 object-cover transition-transform duration-700 hover:-translate-y-1"
+                  />
+                  <img
+                    src={buildWithNashik.url}
+                    alt="Build With Nashik event poster"
+                    loading="lazy"
+                    className="h-56 w-full rounded-[22px] border border-white/15 object-cover transition-transform duration-700 hover:-translate-y-1"
+                  />
+                </div>
+              </Reveal>
               {INITIATIVES.map((item, i) => (
                 <Reveal key={item.name} delay={i * 100}>
                   <article className="rounded-[22px] border border-white/15 bg-white/[0.04] p-7 transition-colors duration-500 hover:bg-white/[0.08]">
