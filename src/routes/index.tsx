@@ -8,6 +8,7 @@ import { Github } from "@/components/site/Github";
 import { Hero } from "@/components/site/Hero";
 import { Nav } from "@/components/site/Nav";
 import { Nest } from "@/components/site/Nest";
+import { Speaking } from "@/components/site/Speaking";
 import { Stats } from "@/components/site/Stats";
 import { Tech } from "@/components/site/Tech";
 import { Timeline } from "@/components/site/Timeline";
@@ -68,6 +69,7 @@ function Index() {
         <Stats />
         <Work />
         <About />
+        <Speaking />
         <Github />
         <Nest />
         <Achievements />
