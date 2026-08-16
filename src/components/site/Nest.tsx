@@ -1,3 +1,5 @@
+import buildWithNashik from "@/assets/build-with-nashik.png.asset.json";
+import nestEvents from "@/assets/nest-events.png.asset.json";
 import { Reveal } from "@/lib/reveal";
 
 const INITIATIVES = [
