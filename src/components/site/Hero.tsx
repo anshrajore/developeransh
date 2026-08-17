@@ -1,4 +1,5 @@
 import logo from "@/assets/nayamarg-logo.jpeg.asset.json";
+import { Magnetic, Parallax, SplitReveal } from "@/lib/motion";
 import { Reveal } from "@/lib/reveal";
 
 export function Hero() {
@@ -40,18 +41,22 @@ export function Hero() {
 
           <Reveal delay={240}>
             <div className="mt-9 flex flex-wrap items-center gap-3">
+              <Magnetic>
               <a
                 href="#work"
                 className="rounded-full bg-foreground px-6 py-3 text-sm text-primary-foreground transition-transform duration-500 hover:-translate-y-0.5"
               >
                 Explore my work ↗
               </a>
+              </Magnetic>
+              <Magnetic>
               <a
                 href="#about"
                 className="rounded-full border border-foreground/25 px-6 py-3 text-sm transition-colors duration-500 hover:bg-foreground/5"
               >
                 About me ↗
               </a>
+              </Magnetic>
             </div>
           </Reveal>
 

@@ -28,7 +28,7 @@ export function Speaking() {
   const frame = useTilt<HTMLDivElement>(7);
 
   return (
-    <section id="speaking" className="relative overflow-hidden border-t border-border py-24 md:py-32">
+    <section id="speaking" data-tint="oklch(0.95 0.022 300)" className="relative overflow-hidden border-t border-border py-24 md:py-32">
       <div
         aria-hidden
         className="pointer-events-none absolute -right-40 top-24 h-[460px] w-[460px] rounded-full opacity-[0.13] blur-3xl"
