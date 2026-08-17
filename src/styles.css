@@ -319,3 +319,46 @@
     transform: none !important;
   }
 }
+
+/* ---- Scroll progress ---- */
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 90;
+  height: 2px;
+  width: 100%;
+  transform: scaleX(0);
+  transform-origin: 0 50%;
+  background: linear-gradient(90deg, var(--cobalt), var(--coral), var(--butter));
+  pointer-events: none;
+}
+
+/* ---- Ambient tint layer ---- */
+html {
+  background-color: var(--ivory);
+}
+
+body {
+  background-color: transparent;
+}
+
+.tint-layer {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background-color: var(--ivory);
+  pointer-events: none;
+}
+
+/* ---- Split word reveal ---- */
+.sw-word {
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: bottom;
+}
+
+.sw-inner {
+  display: inline-block;
+  will-change: transform, opacity;
+}
