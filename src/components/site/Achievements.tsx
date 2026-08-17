@@ -28,7 +28,7 @@ const GALLERY = [
 
 export function Achievements() {
   return (
-    <section id="achievements" data-tint="oklch(0.955 0.03 60)" className="border-t border-border py-24 md:py-32">
+    <section id="achievements" data-tint="oklch(0.958 0.014 60)" className="border-t border-border py-24 md:py-32">
       <div className="shell">
         <Reveal>
           <p className="eyebrow">Achievements</p>

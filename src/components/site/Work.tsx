@@ -4,7 +4,7 @@ import { Reveal } from "@/lib/reveal";
 
 export function Work() {
   return (
-    <section id="work" data-tint="oklch(0.95 0.022 265)" className="border-t border-border py-24 md:py-32">
+    <section id="work" data-tint="oklch(0.955 0.010 265)" className="border-t border-border py-24 md:py-32">
       <div className="shell">
         <Reveal>
           <p className="eyebrow">Selected work</p>
