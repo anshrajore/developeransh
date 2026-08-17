@@ -1,6 +1,7 @@
 import portrait from "@/assets/ansh-portrait.png.asset.json";
 import nestFounder from "@/assets/nest-founder.png.asset.json";
 import { useTilt } from "@/lib/cursor";
+import { Counter, ImageReveal } from "@/lib/motion";
 import { Reveal } from "@/lib/reveal";
 
 const TALKS = [
@@ -28,7 +29,7 @@ export function Speaking() {
   const frame = useTilt<HTMLDivElement>(7);
 
   return (
-    <section id="speaking" className="relative overflow-hidden border-t border-border py-24 md:py-32">
+    <section id="speaking" data-tint="oklch(0.955 0.010 300)" className="relative overflow-hidden border-t border-border py-24 md:py-32">
       <div
         aria-hidden
         className="pointer-events-none absolute -right-40 top-24 h-[460px] w-[460px] rounded-full opacity-[0.13] blur-3xl"
@@ -42,12 +43,15 @@ export function Speaking() {
               ref={frame}
               className="tilt spotlight relative overflow-hidden rounded-[30px] border border-border bg-card"
             >
+              <ImageReveal className="overflow-hidden rounded-[30px]">
               <img
                 src={portrait.url}
+                              
                 alt="Ansh Rajore, founder and AI engineer, in his studio"
                 loading="lazy"
                 className="h-[420px] w-full object-cover object-center sm:h-[520px]"
               />
+              </ImageReveal>
               <div className="absolute inset-x-4 bottom-4 rounded-[20px] border border-white/15 bg-black/45 px-5 py-4 text-white backdrop-blur-md">
                 <p className="text-[10px] tracking-[0.2em] uppercase opacity-70">On stage</p>
                 <p className="mt-1 text-[15px] font-semibold">
@@ -63,9 +67,9 @@ export function Speaking() {
                 ["12+", "Stages"],
                 ["5k+", "Builders reached"],
                 ["3", "National platforms"],
-              ].map(([k, v]) => (
+              ].map(([k = "", v = ""]) => (
                 <div key={v} className="card-edit lift p-4">
-                  <p className="display text-[1.6rem]">{k}</p>
+                  <Counter value={k} className="display block text-[1.6rem]" />
                   <p className="mt-1 text-[11px] tracking-[0.14em] uppercase text-muted-foreground">
                     {v}
                   </p>

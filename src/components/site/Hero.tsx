@@ -1,4 +1,5 @@
 import logo from "@/assets/nayamarg-logo.jpeg.asset.json";
+import { Magnetic, Parallax, SplitReveal } from "@/lib/motion";
 import { Reveal } from "@/lib/reveal";
 
 export function Hero() {
@@ -21,15 +22,12 @@ export function Hero() {
             <p className="eyebrow">Founder · AI Builder · Software Engineer</p>
           </Reveal>
 
-          <Reveal delay={90}>
-            <h1 className="display mt-6 text-[13vw] leading-[0.92] sm:text-[9vw] lg:text-[5.4rem] xl:text-[6.2rem]">
-              I build technology
-              <br />
-              that turns <span className="em-serif">ambitious</span> ideas
-              <br />
-              into something real.
-            </h1>
-          </Reveal>
+          <h1 className="display mt-6 text-[13vw] leading-[0.92] sm:text-[9vw] lg:text-[5.4rem] xl:text-[6.2rem]">
+            <SplitReveal as="span" className="block" text="I build technology" />
+            <SplitReveal as="span" className="block" delay={0.08} text="that turns" />
+            <span className="em-serif">ambitious</span> ideas
+            <SplitReveal as="span" className="block" delay={0.16} text="into something real." />
+          </h1>
 
           <Reveal delay={180}>
             <p className="mt-8 max-w-xl text-[17px] leading-relaxed text-muted-foreground">
@@ -40,18 +38,22 @@ export function Hero() {
 
           <Reveal delay={240}>
             <div className="mt-9 flex flex-wrap items-center gap-3">
+              <Magnetic>
               <a
                 href="#work"
                 className="rounded-full bg-foreground px-6 py-3 text-sm text-primary-foreground transition-transform duration-500 hover:-translate-y-0.5"
               >
                 Explore my work ↗
               </a>
+              </Magnetic>
+              <Magnetic>
               <a
                 href="#about"
                 className="rounded-full border border-foreground/25 px-6 py-3 text-sm transition-colors duration-500 hover:bg-foreground/5"
               >
                 About me ↗
               </a>
+              </Magnetic>
             </div>
           </Reveal>
 
@@ -68,6 +70,7 @@ export function Hero() {
 
         {/* Editorial collage */}
         <Reveal delay={200} className="lg:col-span-5">
+          <Parallax distance={60}>
           <div className="relative mx-auto h-[440px] w-full max-w-[440px] sm:h-[500px]">
             <div
               className="absolute top-2 left-0 h-[300px] w-[62%] rotate-[-3deg] overflow-hidden rounded-[26px] border border-border p-6"
@@ -120,6 +123,7 @@ export function Hero() {
               RAG
             </span>
           </div>
+          </Parallax>
         </Reveal>
       </div>
     </section>

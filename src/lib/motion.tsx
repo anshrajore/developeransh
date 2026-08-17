@@ -82,7 +82,7 @@ export function TintLayer() {
         onToggle: (self) => {
           if (!self.isActive) return;
           gsap.to(layer, {
-            backgroundColor: section.dataset.tint || "var(--ivory)",
+            backgroundColor: section.dataset["tint"] || "var(--ivory)",
             duration: 1.1,
             ease: "power2.out",
             overwrite: true,
@@ -158,7 +158,7 @@ export function SplitReveal({
     <Tag ref={ref as never} className={className}>
       {text.split(" ").map((word, i) => (
         <span key={`${word}-${i}`} className="sw-word">
-          <span className="sw-inner">{word}</span>{" "}
+          <span className="sw-inner">{word}</span>
         </span>
       ))}
     </Tag>
@@ -308,7 +308,7 @@ export function Counter({ value, className }: { value: string; className?: strin
     if (!el) return;
     const match = value.match(/^(\D*)([\d.]+)(.*)$/);
     if (!match || reduced()) return;
-    const [, pre, num, post] = match;
+    const [, pre = "", num = "0", post = ""] = match;
     const target = parseFloat(num);
     const decimals = num.includes(".") ? 1 : 0;
     const obj = { n: 0 };
