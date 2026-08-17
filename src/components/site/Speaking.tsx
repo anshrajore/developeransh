@@ -67,7 +67,7 @@ export function Speaking() {
                 ["12+", "Stages"],
                 ["5k+", "Builders reached"],
                 ["3", "National platforms"],
-              ].map(([k, v]) => (
+              ].map(([k = "", v = ""]) => (
                 <div key={v} className="card-edit lift p-4">
                   <Counter value={k} className="display block text-[1.6rem]" />
                   <p className="mt-1 text-[11px] tracking-[0.14em] uppercase text-muted-foreground">
