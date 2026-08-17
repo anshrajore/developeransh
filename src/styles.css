@@ -354,6 +354,7 @@ body {
 /* ---- Split word reveal ---- */
 .sw-word {
   display: inline-block;
+  margin-right: 0.22em;
   overflow: hidden;
   vertical-align: bottom;
 }

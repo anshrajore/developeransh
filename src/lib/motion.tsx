@@ -158,7 +158,7 @@ export function SplitReveal({
     <Tag ref={ref as never} className={className}>
       {text.split(" ").map((word, i) => (
         <span key={`${word}-${i}`} className="sw-word">
-          <span className="sw-inner">{word}</span>{" "}
+          <span className="sw-inner">{word}</span>
         </span>
       ))}
     </Tag>
