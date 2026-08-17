@@ -12,7 +12,7 @@ const TONE: Record<string, string> = {
 };
 
 export function About() {
-  const tilt = useTilt();
+  const tilt = useTilt<HTMLDivElement>();
 
   return (
     <section id="about" className="py-24 md:py-32" data-tint="oklch(0.958 0.008 90)">
@@ -56,14 +56,19 @@ export function About() {
         {/* Editorial portrait block */}
         <div className="mt-20 grid gap-8 lg:grid-cols-12 lg:items-center">
           <div className="lg:col-span-6">
-            <ImageReveal className="tilt-card overflow-hidden rounded-[28px] border border-border" {...tilt}>
-              <img
-                src={nestFounder.url}
-                alt="Ansh Rajore — founder portrait"
-                loading="lazy"
-                className="h-[420px] w-full object-cover md:h-[520px]"
-              />
-              <span className="spotlight" aria-hidden />
+            <ImageReveal className="overflow-hidden rounded-[28px]">
+              <div
+                ref={tilt}
+                className="tilt-card relative overflow-hidden rounded-[28px] border border-border"
+              >
+                <img
+                  src={nestFounder.url}
+                  alt="Ansh Rajore — founder portrait"
+                  loading="lazy"
+                  className="h-[420px] w-full object-cover md:h-[520px]"
+                />
+                <span className="spotlight" aria-hidden />
+              </div>
             </ImageReveal>
           </div>
 
