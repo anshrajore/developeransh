@@ -5,6 +5,7 @@ import r4 from "@/assets/recap-4.png.asset.json";
 import r5 from "@/assets/recap-5.png.asset.json";
 import r6 from "@/assets/recap-6.webp.asset.json";
 import { ACHIEVEMENTS } from "@/data/portfolio";
+import { SplitReveal } from "@/lib/motion";
 import { Reveal } from "@/lib/reveal";
 
 const TONE: Record<string, string> = {
@@ -32,7 +33,8 @@ export function Achievements() {
         <Reveal>
           <p className="eyebrow">Achievements</p>
           <h2 className="display mt-6 max-w-3xl text-[10vw] leading-[0.95] sm:text-[5rem]">
-            Built, competed, <span className="em-serif">organised</span>.
+            <SplitReveal as="span" text="Built, competed," />{" "}
+            <span className="em-serif">organised</span>.
           </h2>
         </Reveal>
 

@@ -1,4 +1,5 @@
 import logo from "@/assets/nayamarg-logo.jpeg.asset.json";
+import { SplitReveal } from "@/lib/motion";
 import { Reveal } from "@/lib/reveal";
 
 export function Work() {
@@ -8,11 +9,10 @@ export function Work() {
         <Reveal>
           <p className="eyebrow">Selected work</p>
         </Reveal>
-        <Reveal delay={80}>
-          <h2 className="display mt-6 max-w-3xl text-[10vw] leading-[0.95] sm:text-[5rem]">
-            Things I&apos;ve built <span className="em-serif">end to end</span>.
-          </h2>
-        </Reveal>
+        <h2 className="display mt-6 max-w-3xl text-[10vw] leading-[0.95] sm:text-[5rem]">
+          <SplitReveal as="span" text="Things I've built" />{" "}
+          <span className="em-serif">end to end</span>.
+        </h2>
 
         {/* NayaMarg */}
         <Reveal delay={120}>

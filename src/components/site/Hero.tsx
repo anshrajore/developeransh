@@ -70,6 +70,7 @@ export function Hero() {
 
         {/* Editorial collage */}
         <Reveal delay={200} className="lg:col-span-5">
+          <Parallax distance={60}>
           <div className="relative mx-auto h-[440px] w-full max-w-[440px] sm:h-[500px]">
             <div
               className="absolute top-2 left-0 h-[300px] w-[62%] rotate-[-3deg] overflow-hidden rounded-[26px] border border-border p-6"
@@ -122,6 +123,7 @@ export function Hero() {
               RAG
             </span>
           </div>
+          </Parallax>
         </Reveal>
       </div>
     </section>
