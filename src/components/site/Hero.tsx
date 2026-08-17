@@ -22,15 +22,12 @@ export function Hero() {
             <p className="eyebrow">Founder · AI Builder · Software Engineer</p>
           </Reveal>
 
-          <Reveal delay={90}>
-            <h1 className="display mt-6 text-[13vw] leading-[0.92] sm:text-[9vw] lg:text-[5.4rem] xl:text-[6.2rem]">
-              I build technology
-              <br />
-              that turns <span className="em-serif">ambitious</span> ideas
-              <br />
-              into something real.
-            </h1>
-          </Reveal>
+          <h1 className="display mt-6 text-[13vw] leading-[0.92] sm:text-[9vw] lg:text-[5.4rem] xl:text-[6.2rem]">
+            <SplitReveal as="span" className="block" text="I build technology" />
+            <SplitReveal as="span" className="block" delay={0.08} text="that turns" />
+            <span className="em-serif">ambitious</span> ideas
+            <SplitReveal as="span" className="block" delay={0.16} text="into something real." />
+          </h1>
 
           <Reveal delay={180}>
             <p className="mt-8 max-w-xl text-[17px] leading-relaxed text-muted-foreground">
