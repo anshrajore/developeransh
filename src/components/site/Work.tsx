@@ -225,10 +225,16 @@ export function Work() {
           <Reveal delay={100}>
             <article className="card-edit lift h-full overflow-hidden">
               <div
-                className="flex h-48 items-end p-8"
+                className="flex h-48 items-end justify-between gap-6 p-8"
                 style={{ background: "linear-gradient(140deg, var(--cobalt), var(--violet-a))" }}
               >
                 <p className="display text-[2.8rem] text-white">SanjeevaniX</p>
+                <img
+                  src={sanjeevanix.url}
+                  alt="SanjeevaniX logo — Blood Bridge AI autonomous platform"
+                  loading="lazy"
+                  className="h-16 w-16 shrink-0 rounded-2xl bg-white object-contain p-2"
+                />
               </div>
               <div className="p-8">
                 <p className="eyebrow">Healthcare AI</p>
