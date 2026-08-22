@@ -1,8 +1,9 @@
-import nestFounder from "@/assets/nest-founder.png.asset.json";
+import { IMAGES } from "@/data/images";
 import { PILLARS } from "@/data/portfolio";
 import { ImageReveal, Parallax, SplitReveal } from "@/lib/motion";
 import { Reveal } from "@/lib/reveal";
 import { useTilt } from "@/lib/cursor";
+import { SiteImage } from "./SiteImage";
 
 const TONE: Record<string, string> = {
   butter: "var(--butter)",
@@ -61,9 +62,8 @@ export function About() {
                 ref={tilt}
                 className="tilt-card relative overflow-hidden rounded-[28px] border border-border"
               >
-                <img
-                  src={nestFounder.url}
-                  alt="Ansh Rajore — founder portrait"
+                <SiteImage
+                  {...IMAGES.nestFounder}
                   loading="lazy"
                   className="h-[420px] w-full object-cover md:h-[520px]"
                 />

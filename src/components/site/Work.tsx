@@ -1,7 +1,7 @@
-import logo from "@/assets/nayamarg-logo.jpeg.asset.json";
-import sanjeevanix from "@/assets/sanjeevanix-logo.png.asset.json";
+import { IMAGES } from "@/data/images";
 import { SplitReveal } from "@/lib/motion";
 import { Reveal } from "@/lib/reveal";
+import { SiteImage } from "./SiteImage";
 
 const VERDICTS = [
   { id: "UI-014", sev: "fail", line: "Button.tsx:42", note: "Hardcoded hex bypasses token system" },
@@ -171,11 +171,11 @@ export function Work() {
                   In development
                 </span>
               </div>
-              <img
-                src={logo.url}
-                alt="NayaMarg logo — connecting people to opportunities"
+              <SiteImage
+                {...IMAGES.nayamargLogo}
                 loading="lazy"
                 className="h-40 w-40 rounded-full object-cover shadow-[0_30px_60px_-30px_rgba(0,0,0,0.5)]"
+                fallbackClassName="shrink-0"
               />
               <p className="display text-[3.4rem] text-ink md:text-[4.5rem]">NayaMarg</p>
             </div>
@@ -229,11 +229,11 @@ export function Work() {
                 style={{ background: "linear-gradient(140deg, var(--cobalt), var(--violet-a))" }}
               >
                 <p className="display text-[2.8rem] text-white">SanjeevaniX</p>
-                <img
-                  src={sanjeevanix.url}
-                  alt="SanjeevaniX logo — Blood Bridge AI autonomous platform"
+                <SiteImage
+                  {...IMAGES.sanjeevanixLogo}
                   loading="lazy"
                   className="h-16 w-16 shrink-0 rounded-2xl bg-white object-contain p-2"
+                  fallbackClassName="p-0"
                 />
               </div>
               <div className="p-8">

@@ -1,6 +1,6 @@
-import buildWithNashik from "@/assets/build-with-nashik.png.asset.json";
-import nestEvents from "@/assets/nest-events.png.asset.json";
+import { IMAGES } from "@/data/images";
 import { Reveal } from "@/lib/reveal";
+import { SiteImage } from "./SiteImage";
 
 const INITIATIVES = [
   {
@@ -56,15 +56,13 @@ export function Nest() {
             <div className="grid gap-4 lg:col-span-6">
               <Reveal>
                 <div className="grid grid-cols-2 gap-4">
-                  <img
-                    src={nestEvents.url}
-                    alt="NEST initiatives poster featuring Ansh Rajore"
+                  <SiteImage
+                    {...IMAGES.nestEvents}
                     loading="lazy"
                     className="h-56 w-full rounded-[22px] border border-white/15 object-cover transition-transform duration-700 hover:-translate-y-1"
                   />
-                  <img
-                    src={buildWithNashik.url}
-                    alt="Build With Nashik event poster"
+                  <SiteImage
+                    {...IMAGES.buildWithNashik}
                     loading="lazy"
                     className="h-56 w-full rounded-[22px] border border-white/15 object-cover transition-transform duration-700 hover:-translate-y-1"
                   />

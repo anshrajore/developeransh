@@ -1,12 +1,8 @@
-import r1 from "@/assets/recap-1.png.asset.json";
-import r2 from "@/assets/recap-2.png.asset.json";
-import r3 from "@/assets/recap-3.png.asset.json";
-import r4 from "@/assets/recap-4.png.asset.json";
-import r5 from "@/assets/recap-5.png.asset.json";
-import r6 from "@/assets/recap-6.webp.asset.json";
+import { IMAGES } from "@/data/images";
 import { ACHIEVEMENTS } from "@/data/portfolio";
 import { SplitReveal } from "@/lib/motion";
 import { Reveal } from "@/lib/reveal";
+import { SiteImage } from "./SiteImage";
 
 const TONE: Record<string, string> = {
   butter: "var(--butter)",
@@ -18,12 +14,12 @@ const TONE: Record<string, string> = {
 };
 
 const GALLERY = [
-  { src: r1.url, caption: "SUNHACKS — lead organizer, GenAI hackathon at record scale" },
-  { src: r2.url, caption: "National Startup Day 2025 — Prarambh" },
-  { src: r3.url, caption: "Pitching at the BRICS Youth Council pre-consultation" },
-  { src: r4.url, caption: "TechUdaan — leading the team through an on-site disruption" },
-  { src: r5.url, caption: "Smart Axis My India Hackathon — 1st Runner-Up" },
-  { src: r6.url, caption: "HackPrix National Level Hackathon — 1st Runner-Up" },
+  { ...IMAGES.recap1, caption: "SUNHACKS - lead organizer, GenAI hackathon at record scale" },
+  { ...IMAGES.recap2, caption: "National Startup Day 2025 - Prarambh" },
+  { ...IMAGES.recap3, caption: "Pitching at the BRICS Youth Council pre-consultation" },
+  { ...IMAGES.recap4, caption: "TechUdaan - leading the team through an on-site disruption" },
+  { ...IMAGES.recap5, caption: "Smart Axis My India Hackathon - 1st Runner-Up" },
+  { ...IMAGES.recap6, caption: "HackPrix National Level Hackathon - 1st Runner-Up" },
 ];
 
 export function Achievements() {
@@ -69,9 +65,11 @@ export function Achievements() {
         <div className="marquee-track gap-5">
           {[...GALLERY, ...GALLERY].map((item, i) => (
             <figure key={i} className="w-[300px] shrink-0 sm:w-[380px]">
-              <img
+              <SiteImage
                 src={item.src}
                 alt={item.caption}
+                label={item.label}
+                tone={item.tone}
                 loading="lazy"
                 className="h-[240px] w-full rounded-[20px] border border-border object-cover sm:h-[280px]"
               />

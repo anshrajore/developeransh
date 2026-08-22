@@ -1,8 +1,8 @@
-import portrait from "@/assets/ansh-portrait.png.asset.json";
-import nestFounder from "@/assets/nest-founder.png.asset.json";
+import { IMAGES } from "@/data/images";
 import { useTilt } from "@/lib/cursor";
 import { Counter, ImageReveal } from "@/lib/motion";
 import { Reveal } from "@/lib/reveal";
+import { SiteImage } from "./SiteImage";
 
 const TALKS = [
   {
@@ -44,10 +44,8 @@ export function Speaking() {
               className="tilt spotlight relative overflow-hidden rounded-[30px] border border-border bg-card"
             >
               <ImageReveal className="overflow-hidden rounded-[30px]">
-              <img
-                src={portrait.url}
-                              
-                alt="Ansh Rajore, founder and AI engineer, in his studio"
+              <SiteImage
+                {...IMAGES.anshPortrait}
                 loading="lazy"
                 className="h-[420px] w-full object-cover object-center sm:h-[520px]"
               />
@@ -121,9 +119,11 @@ export function Speaking() {
 
           <Reveal delay={160}>
             <div className="mt-10 flex flex-wrap items-center gap-4">
-              <img
-                src={nestFounder.url}
+              <SiteImage
+                src={IMAGES.nestFounder.src}
                 alt="Ansh Rajore speaking for NEST"
+                label={IMAGES.nestFounder.label}
+                tone={IMAGES.nestFounder.tone}
                 loading="lazy"
                 className="h-20 w-32 rounded-[16px] border border-border object-cover"
               />

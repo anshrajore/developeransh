@@ -1,6 +1,7 @@
-import logo from "@/assets/nayamarg-logo.jpeg.asset.json";
+import { IMAGES } from "@/data/images";
 import { Magnetic, Parallax, SplitReveal } from "@/lib/motion";
 import { Reveal } from "@/lib/reveal";
+import { SiteImage } from "./SiteImage";
 
 export function Hero() {
   return (
@@ -86,11 +87,11 @@ export function Hero() {
             </div>
 
             <div className="absolute top-24 right-0 w-[48%] rotate-[3deg] rounded-[24px] border border-border bg-card p-5 shadow-[0_30px_70px_-45px_rgba(0,0,0,0.5)]">
-              <img
-                src={logo.url}
-                alt="NayaMarg brand mark"
+              <SiteImage
+                {...IMAGES.nayamargLogo}
                 loading="lazy"
                 className="h-24 w-full rounded-[14px] object-contain"
+                fallbackClassName="items-center justify-center"
               />
               <p className="mt-4 text-[11px] tracking-[0.16em] text-muted-foreground uppercase">
                 AI / Full Stack / Product
