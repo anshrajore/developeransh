@@ -32,8 +32,9 @@ export function Hero() {
 
           <Reveal delay={180}>
             <p className="mt-8 max-w-xl text-[17px] leading-relaxed text-muted-foreground">
-              Founder, engineer and builder working across AI, full-stack systems, products and
-              technology communities.
+              Computer Science student and AI builder based in Nashik, India. Crafting conversational
+              interfaces, agentic systems, and full-stack scaffolding that turn ambitious ideas into
+              real-world impact.
             </p>
           </Reveal>
 

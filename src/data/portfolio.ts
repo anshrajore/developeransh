@@ -7,8 +7,9 @@ export const NAV = [
 ];
 
 export const LINKS = {
+  website: "https://www.anshrajore.in",
   github: "https://github.com/anshrajore",
-  linkedin: "https://www.linkedin.com/in/anshrajore",
+  linkedin: "https://in.linkedin.com/in/anshrajore",
   email: "mailto:anshrajore@gmail.com",
 };
 
@@ -229,11 +230,11 @@ export const TIMELINE = [
 export const FAQ = [
   {
     q: "Who is Ansh Rajore?",
-    a: "A founder, AI builder and full-stack engineer based in Nashik, India. He works across AI systems, product engineering and technology communities — currently building NayaMarg and NEST.",
+    a: "An AI systems engineer and founder based in Nashik, India. Developer of open-source agentic infrastructure like Atelier MCP and AEONRIFT, and founder of NayaMarg and NEST.",
   },
   {
     q: "What does Ansh build?",
-    a: "AI-native products and the systems around them: conversational and agentic interfaces, matching and recommendation engines, automation pipelines and the full-stack products they live inside.",
+    a: "Conversational interfaces, agentic systems, and full-stack scaffolding that turn ambitious ideas into real-world impact.",
   },
   {
     q: "What is NayaMarg?",

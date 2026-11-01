@@ -15,9 +15,9 @@ import { Timeline } from "@/components/site/Timeline";
 import { Work } from "@/components/site/Work";
 import { FAQ } from "@/data/portfolio";
 
-const TITLE = "Ansh Rajore — Founder, AI Builder & Full-Stack Engineer";
+const TITLE = "Ansh Rajore — Founder, AI Builder & Software Engineer";
 const DESCRIPTION =
-  "Portfolio of Ansh Rajore — AI-native products, agentic systems and full-stack engineering from Nashik. Building NayaMarg and NEST.";
+  "Ansh Rajore is an AI systems engineer and founder based in Nashik, India. Developer of open-source agentic infrastructure like Atelier MCP and AEONRIFT, and founder of NayaMarg and NEST.";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -27,10 +27,12 @@ export const Route = createFileRoute("/")({
       { property: "og:title", content: TITLE },
       { property: "og:description", content: DESCRIPTION },
       { property: "og:type", content: "website" },
-      { property: "og:url", content: "/" },
+      { property: "og:url", content: "https://www.anshrajore.in" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: TITLE },
+      { name: "twitter:description", content: DESCRIPTION },
     ],
-    links: [{ rel: "canonical", href: "/" }],
+    links: [{ rel: "canonical", href: "https://www.anshrajore.in" }],
     scripts: [
       {
         type: "application/ld+json",
@@ -38,9 +40,11 @@ export const Route = createFileRoute("/")({
           "@context": "https://schema.org",
           "@type": "Person",
           name: "Ansh Rajore",
-          jobTitle: "Founder, AI Builder & Full-Stack Engineer",
+          url: "https://www.anshrajore.in",
+          jobTitle: "Founder, AI Builder & Software Engineer",
+          description: DESCRIPTION,
           address: { "@type": "PostalAddress", addressLocality: "Nashik", addressCountry: "IN" },
-          sameAs: ["https://github.com/anshrajore", "https://www.linkedin.com/in/anshrajore"],
+          sameAs: ["https://github.com/anshrajore", "https://in.linkedin.com/in/anshrajore"],
         }),
       },
       {

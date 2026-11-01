@@ -55,7 +55,7 @@ export function Contact() {
 
         <div className="mt-16 flex flex-col gap-2 text-[12px] text-muted-foreground sm:flex-row sm:items-center sm:justify-between">
           <p>© {new Date().getFullYear()} Ansh Rajore — Nashik, India.</p>
-          <p>Founder · AI Builder · Full-Stack Engineer</p>
+          <p>Founder · AI Builder · Software Engineer</p>
         </div>
       </div>
     </footer>

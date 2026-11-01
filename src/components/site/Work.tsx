@@ -266,14 +266,14 @@ export function Work() {
                 <p className="display text-[2.8rem] text-primary-foreground">Dark Arcane</p>
               </div>
               <div className="p-8">
-                <p className="eyebrow">Agentic AI · Team lead</p>
+                <p className="eyebrow">Agentic AI · Open-Source Infrastructure</p>
                 <p className="mt-4 text-[15px] leading-relaxed text-muted-foreground">
-                  The team I build and compete with. Dark Arcane focuses on agentic AI systems —
-                  retrieval-augmented generation, persistent memory and multi-step autonomous
-                  workflows — and has placed at national hackathons across the country.
+                  Open-source agentic infrastructure and autonomous execution frameworks developed
+                  under Dark Arcane, including AEONRIFT — built with retrieval-augmented generation,
+                  persistent memory and multi-step autonomous workflows.
                 </p>
                 <div className="mt-6 flex flex-wrap gap-2">
-                  {["Agentic AI", "RAG", "Memory", "Automation"].map((t) => (
+                  {["AEONRIFT", "Agentic AI", "MCP", "RAG", "Memory", "Automation"].map((t) => (
                     <span
                       key={t}
                       className="rounded-full border border-border px-3 py-1 text-[12px] text-muted-foreground"
