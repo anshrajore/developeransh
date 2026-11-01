@@ -9,10 +9,16 @@ const asset = (filename: string) => `/assets/${filename}`;
 
 export const IMAGES = {
   anshPortrait: {
-    src: asset("ansh-portrait.png"),
+    src: asset("ansh-founder-portrait.jpg"),
     alt: "Ansh Rajore, founder and AI engineer",
     label: "Ansh Rajore",
     tone: "linear-gradient(140deg, var(--cobalt), var(--violet-a))",
+  },
+  nestLogo: {
+    src: asset("nest-logo.jpg"),
+    alt: "NEST - Nashik Ecosystem for Startups & Technology logo",
+    label: "NEST",
+    tone: "linear-gradient(140deg, var(--ink), var(--cobalt))",
   },
   buildWithNashik: {
     src: asset("build-with-nashik.png"),
@@ -27,13 +33,13 @@ export const IMAGES = {
     tone: "linear-gradient(140deg, var(--butter), var(--lime-a))",
   },
   nestEvents: {
-    src: asset("nest-events.png"),
+    src: asset("nest-events.jpg"),
     alt: "NEST initiatives poster featuring Ansh Rajore",
     label: "NEST Events",
     tone: "linear-gradient(140deg, var(--ink), var(--cobalt))",
   },
   nestFounder: {
-    src: asset("nest-founder.png"),
+    src: asset("ansh-founder-portrait.jpg"),
     alt: "Ansh Rajore - founder portrait",
     label: "NEST Founder",
     tone: "linear-gradient(140deg, var(--violet-a), var(--coral))",

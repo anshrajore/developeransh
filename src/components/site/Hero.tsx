@@ -102,8 +102,15 @@ export function Hero() {
               className="absolute bottom-16 left-6 w-[52%] -rotate-[2deg] rounded-[24px] p-5 text-primary-foreground"
               style={{ background: "var(--ink)" }}
             >
-              <p className="text-[10px] tracking-[0.2em] opacity-60 uppercase">Founder</p>
-              <p className="display mt-6 text-[2rem]">NEST</p>
+              <div className="flex items-center justify-between">
+                <p className="text-[10px] tracking-[0.2em] opacity-60 uppercase">Founder</p>
+                <img
+                  src={IMAGES.nestLogo.src}
+                  alt="NEST"
+                  className="h-6 w-6 rounded-md border border-white/20 bg-black object-cover"
+                />
+              </div>
+              <p className="display mt-4 text-[2rem]">NEST</p>
               <p className="mt-1 text-[12px] opacity-70">
                 Nashik Ecosystem for Startups &amp; Technology
               </p>

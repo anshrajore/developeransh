@@ -24,9 +24,19 @@ export function Nest() {
         <div className="overflow-hidden rounded-[32px] bg-foreground text-primary-foreground">
           <div className="grid gap-12 p-8 md:p-14 lg:grid-cols-12">
             <Reveal className="lg:col-span-6">
-              <p className="text-[11px] tracking-[0.2em] uppercase opacity-60">
-                Ecosystem building
-              </p>
+              <div className="flex items-center gap-4">
+                <SiteImage
+                  {...IMAGES.nestLogo}
+                  loading="lazy"
+                  className="h-14 w-14 rounded-2xl border border-white/20 bg-black object-cover"
+                />
+                <div>
+                  <p className="text-[11px] tracking-[0.2em] uppercase opacity-60">
+                    Ecosystem building
+                  </p>
+                  <p className="text-[13px] font-medium text-lime">Nashik, India</p>
+                </div>
+              </div>
               <h2 className="display mt-6 text-[11vw] leading-[0.92] sm:text-[4.6rem]">
                 NEST
               </h2>
